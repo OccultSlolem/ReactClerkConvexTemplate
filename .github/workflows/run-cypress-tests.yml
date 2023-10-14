@@ -18,7 +18,7 @@ jobs:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
         node-version: [16.x]
-        containers: [1, 2] # Uses 2 parallel instances
+        # containers: [1, 2] # Uses 2 parallel instances. Only works with record enabled.
 
     steps:
       - name: Checkout Repo
@@ -45,7 +45,7 @@ jobs:
           build: npm run build
           start: npm run dev
           wait-on: 'http://localhost:5173'
-          record: false # See Cypress Dashboard docs on how to set this up
-          parallel: true # Runs test in parallel using settings above
+          # record: false # See Cypress Dashboard docs on how to set this up
+          # parallel: true # Runs test in parallel using settings above. Only works with record enabled.
         # env:
         #   CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
