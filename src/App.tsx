@@ -254,6 +254,30 @@ export function AuthPage({ fn }: { fn: "sign-in" | "sign-up" | "settings" }) {
   );
 }
 
+export function Terms() {
+  return (
+    <VStack minH="100vh">
+      <Heading>Terms of Service</Heading>
+      <Text maxW="xl">I don't really care how you choose to use this service. It's just a counter. Don't do anything illegal.</Text>
+      <Text maxW="xl">I'm not responsible for your use of this service. Everything is provided as is.</Text>
+      <Text maxW="xl">If you have any concerns, please reach out to <a href="mailto:me@ethan-hanlon.xyz" className="text-blue-500">me@ethan-hanlon.xyz</a>.</Text>
+    </VStack>
+  );
+}
+
+export function Privacy() {
+  return (
+    <VStack minH="100vh" >
+      <Heading>Privacy Policy</Heading>
+      {/* DRY :( */}
+      <Text maxW="xl">If you use the counter, that action may be logged along with your IP address. If you create an account, I'll collect your email and/or Discord. Otherwise, I don't collect any data from you.</Text>
+      <Text maxW="xl">If you create an account using Clerk, you agree to their terms of service and privacy policy. Likewise if you choose to connect Discord.</Text>
+      <Text maxW="xl">Note that I have Clerk running in Dev mode. Your account is subject to deletion as I or Clerk deign it. Don't grow attached :)</Text>
+      <Text maxW="xl">If you have any concerns, please reach out to <a href="mailto:me@ethan-hanlon.xyz" className="text-blue-500">me@ethan-hanlon.xyz</a>.</Text>
+    </VStack>
+  )
+}
+
 export function NotFound() {
   const navigate = useNavigate();
 

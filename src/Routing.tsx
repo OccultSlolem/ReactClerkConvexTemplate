@@ -3,7 +3,7 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexReactClient } from "convex/react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { AuthPage, Home, NotFound } from "./App";
+import { AuthPage, Home, NotFound, Privacy, Terms } from "./App";
 import { Layout } from "./Layout";
 
 export default function App() {
@@ -25,6 +25,8 @@ export default function App() {
                 <Route path="/sign-in" element={<AuthPage fn="sign-in" />} />
                 <Route path="/sign-up" element={<AuthPage fn="sign-up" />} />
                 <Route path="/account-settings" element={<AuthPage fn="settings" />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/privacy" element={<Privacy />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
