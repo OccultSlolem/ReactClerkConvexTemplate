@@ -3,11 +3,11 @@ name: Run Cypress E2E Tests
 on:
   push:
     branches:
-      - master
+      - main
       - dev
   pull_request:
     branches:
-      - master
+      - main
       - dev
 
 jobs:
