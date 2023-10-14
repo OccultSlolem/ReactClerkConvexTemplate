@@ -68,7 +68,7 @@ npx convex dev
 
 ### 4. (Optional) Set up GitHub Actions
 
-This template includes a GitHub Actions workflow that will automatically deploy your Convex application to the Convex cloud when you push to the `main` branch. To set it up, you'll need to add the **DOTENV_VARS** secret to your repository. This should just be a copy-paste string of your `.env.local` file.
+This template includes a GitHub Actions workflow that will automatically run your Cypress tests when you push to the `main` or `dev` branches. To set it up, you'll need to add the **DOTENV_VARS** secret to your repository. This should just be a copy-paste string of your `.env.local` file.
 
 You did remember to gitignore your dotenv files, right?
 
